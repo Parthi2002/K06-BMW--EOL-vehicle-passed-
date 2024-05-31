@@ -1,0 +1,63 @@
+<!-- <p>k06-monitoring works!</p> -->
+
+<div class="animated fadeIn" [hidden]="showForms">
+    <div class="row">
+      <div class="col-md-7 center">
+        <div class="card">
+          <form class="form-horizontal" [formGroup]="formGroupModal" (ngSubmit)="onModelFormSubmit()">
+            <div class="card-header">
+              <!-- <strong>{{modalFormTitle}}</strong> -->
+            </div>
+            <div class="card-body">
+              
+  
+             
+  
+              <div class="flex-row mt-1">
+                <label class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-form-label" for="inputModalFrameNo">Frame No
+                </label>
+                <mat-form-field class="col-sm-6 col-md-6 col-lg-6 col-xl-6" floatLabel="never">
+                  <input matInput placeholder="-- Enter Frame no --" value=""
+                    oninput="this.value = this.value.toUpperCase()" autocomplete="off"
+                    formControlName="inputModalFrameNo">
+                </mat-form-field>
+              </div>
+  
+              <div class="flex-row mt-1">
+                <label class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-form-label" for="inputModalEngineNo">Engine No
+                </label>
+                <mat-form-field class="col-sm-6 col-md-6 col-lg-6 col-xl-6" floatLabel="never">
+                  <input matInput placeholder="-- Enter Engine No --" value=""
+                    oninput="this.value = this.value.toUpperCase()" autocomplete="off"
+                    formControlName="inputModalEngineNo">
+                </mat-form-field>
+              </div>
+  
+              
+  
+              <div class="flex-row mt-1">
+                <label class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-form-label" for="inputModalSKUPartNo">SKU Part No
+                </label>
+                <mat-form-field class="col-sm-6 col-md-6 col-lg-6 col-xl-6" floatLabel="never">
+                  <input matInput placeholder="-- Enter SKU Part No --" value=""
+                    oninput="this.value = this.value.toUpperCase()" autocomplete="off"
+                    formControlName="inputModalSKUPartNo">
+                </mat-form-field>
+              </div>
+    
+  
+            <div class="card-footer">
+              <button type="submit" class="btn btn-md btn-primary"><i class="fa fa-dot-circle-o"></i>
+                Submit</button>
+              <button type="reset" class="btn btn-md btn-danger" (click)="onResetClick()" ><i
+                  class="fa fa-ban"></i>
+                Reset</button>
+              <button type="button" class="btn btn-md btn-secondary" (click)="onCancelClick()"><i class="fa fa-ban"></i>
+                Cancel</button>
+            </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
